@@ -1,6 +1,8 @@
 const positionModel = require('../models/positions')
 const findAll = async (req, res, next) => {
     res.set('Content-Type', 'application/json;charset=utf-8')
+    res.set('Access-Control-Allow-Origin','http://localhost:8080')
+    res.set('Access-Control-Allow-Credentials',true)
     let pageInfo = req.query
     let result = await positionModel.findAll(pageInfo)
     if (result) {

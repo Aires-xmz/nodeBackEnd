@@ -7,7 +7,8 @@ const Users = mongoose.model('users', {
     pic:String,
     signature:String,
     sex:Number,
-    birthday:String
+    birthday:String,
+    tel:Number
 });
 
 const Positions = mongoose.model('positions',{
@@ -21,9 +22,28 @@ const Positions = mongoose.model('positions',{
     firstclassfare:String
 }) 
 
+
+const Admin = mongoose.model('admin',{
+    adminname:String,
+    password:String
+})
+
+const Goods = mongoose.model('goods',{
+    dep:String,
+    des:String,
+    depdate:String,
+    deptime:String,
+    desdate:String,
+    destime:String,
+    fare:Number,
+    producttime:String
+})
+
 module.exports = {
     Users,
-    Positions
+    Positions,
+    Admin,
+    Goods
 }
 
 

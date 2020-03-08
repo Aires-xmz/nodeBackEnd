@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var positionRouter = require('./routes/position')
 var profileRouter = require('./routes/profile')
 var mhomeRouter = require('./routes/mhome')
+var adminRouter = require('./routes/admin')
 var app = express();
 const authMiddleware = require('./middleware/auth')
 
@@ -43,6 +44,7 @@ app.use('/api/users', usersRouter);
 app.use('/api/position',authMiddleware,positionRouter)
 app.use('/api/profile',authMiddleware,profileRouter)
 app.use('/api/mhome',mhomeRouter)
+app.use('/api/admin',adminRouter)
 
 
 
