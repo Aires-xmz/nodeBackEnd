@@ -1,10 +1,13 @@
-const userModel = require("./../models/users")
 const {
-    Users
+    Admin
 } = require("../utils/db")
-const findOne = userModel.findOne
+
+const findOne = (conditions) => {
+    return Admin.findOne(conditions)
+}
+
 const updata = async (data) => {
-    return await Users.findByIdAndUpdate(data.id, data)
+    return await Admin.findByIdAndUpdate(data.id, data)
 }
 module.exports = {
     findOne,

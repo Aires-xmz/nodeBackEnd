@@ -1,10 +1,8 @@
 const profileModel = require('../models/profile')
 const personalData = async (req, res, next) => {
     res.set('Content-Type', 'application/json;charset=utf-8')
-    let username = req.body.username
-    let result = await profileModel.findOne({
-        username
-    })
+    let adminname = req.body.username
+    let result = await profileModel.findOne({adminname})
     if (result) {
         res.render('succ', {
             data: JSON.stringify(result)

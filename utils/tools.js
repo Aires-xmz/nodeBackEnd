@@ -38,8 +38,7 @@ const generateToken = (username) => {
   })
 
 
-  /*const cert2 = fs.readFileSync('../key/rsa_public_key.pem')
-   */
+  //const cert2 = fs.readFileSync('../key/rsa_public_key.pem')
 }
 
 const verifyToken = (token) => {

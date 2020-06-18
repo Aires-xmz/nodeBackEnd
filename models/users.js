@@ -9,6 +9,7 @@ function save(data) {
 }
 
 const findOne = (conditions) => {
+    console.log(conditions)
     return Users.findOne(conditions)
 }
 

@@ -4,39 +4,44 @@ mongoose.set('useFindAndModify', false);
 const Users = mongoose.model('users', {
     username: String,
     password: String,
-    pic:String,
-    signature:String,
-    sex:Number,
-    birthday:String,
-    tel:Number
+    pic: String,
+    signature: String,
+    sex: Number,
+    birthday: String,
+    tel: Number
 });
 
-const Positions = mongoose.model('positions',{
-    dep:String,
-    des:String,
-    depdate:String,
-    deptime:String,
-    desdate:String,
-    destime:String,
-    economyfare:String,
-    firstclassfare:String
-}) 
-
-
-const Admin = mongoose.model('admin',{
-    adminname:String,
-    password:String
+const Positions = mongoose.model('positions', {
+    dep: String,
+    des: String,
+    depdate: String,
+    deptime: String,
+    desdate: String,
+    destime: String,
+    economyfare: String,
+    firstclassfare: String
 })
 
-const Goods = mongoose.model('goods',{
-    dep:String,
-    des:String,
-    depdate:String,
-    deptime:String,
-    desdate:String,
-    destime:String,
-    fare:Number,
-    producttime:String
+
+const Admin = mongoose.model('admin', {
+    adminname: String,
+    password: String,
+    pic: String,
+    signature: String,
+    sex: Number,
+    birthday: String,
+    tel: Number
+})
+
+const Goods = mongoose.model('goods', {
+    dep: String,
+    des: String,
+    depdate: String,
+    deptime: String,
+    desdate: String,
+    destime: String,
+    fare: Number,
+    producttime: String
 })
 
 module.exports = {
